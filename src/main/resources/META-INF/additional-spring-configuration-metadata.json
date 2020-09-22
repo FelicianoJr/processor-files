@@ -1,0 +1,39 @@
+{
+	"properties": [
+		{
+			"name": "app.name",
+			"type": "java.lang.String",
+			"description": "Application Name being used for SpringDoc configuration"
+		},
+		{
+			"name": "app.version",
+			"type": "java.lang.String",
+			"description": "Application Version being used for SpringDoc configuration"
+		},
+		{
+			"name": "api.type-data.customerId",
+			"type": "java.lang.String",
+			"description": "A description for 'api.type-data.customerId'"
+		},
+		{
+			"name": "api.type-data.salesManId",
+			"type": "java.lang.String",
+			"description": "A description for 'api.type-data.salesManId'"
+		},
+		{
+			"name": "api.type-data.salesId",
+			"type": "java.lang.String",
+			"description": "A description for 'api.type-data.salesId'"
+		},
+		{
+			"name": "route.from",
+			"type": "java.lang.String",
+			"description": "A description for 'route.from'"
+		},
+		{
+			"name": "route.to",
+			"type": "java.lang.String",
+			"description": "A description for 'route.to'"
+		}
+	]
+}

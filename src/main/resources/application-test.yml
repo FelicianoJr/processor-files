@@ -1,0 +1,11 @@
+app:
+  name: '@project.name@'
+  version: '@project.version@'
+api:
+  type-data:
+    customerId: '001'
+    salesManId: '002'
+    salesId: '003'
+route:
+  from:  file:${user.home}/data/in/  
+  to: file:${user.home}/data/out/  
