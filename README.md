@@ -3,9 +3,9 @@ Aplicação para análise de arquivos
 
 ## Tecnologias do projeto
 
-  Java 1.8
-  camel-spring-boot 3.5.0
-  lombok
+  Java 1.8, 
+  camel-spring-boot 3.5.0, 
+  lombok, 
   Junit 5
   
 ## Construção
