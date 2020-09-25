@@ -1,12 +1,12 @@
 package com.dbc.analise.file.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 
-@Data
+@Builder
+@Getter
 @AllArgsConstructor
-@NoArgsConstructor
 public class DataInfo {
 
 	private String id;

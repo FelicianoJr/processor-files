@@ -14,6 +14,7 @@ public class StringUtils {
 	private static final String REGEX_BRACKET = "\\[|\\]";
 	private static final String REGEX_COMMA = ",";
 	private static final String REGEX_DASH = "-";
+	private static final String SEPARATOR = "ç";
 
 	public static List<String> clearBracketAndComma(DataInfo dataInfo) {
 		return Arrays.asList(dataInfo.getName().replaceAll(REGEX_BRACKET, "").split(REGEX_COMMA));
@@ -21,6 +22,10 @@ public class StringUtils {
 
 	public static String[] divideByDash(String value) {
 		return value.split(REGEX_DASH);
+	}
+	
+	public static String[] divideByC(String value) {
+		return value.split(SEPARATOR);
 	}
 
 }

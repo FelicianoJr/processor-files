@@ -1,4 +1,4 @@
-package com.dbc.analise.file;
+package com.dbc.analise.file.processor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,10 +13,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 
-import com.dbc.analise.file.processor.FileProcessor;
-
 @SpringBootTest
-class StartApplicationTest {
+class FileProcessorTest {
 
 	@Value("classpath:payload.dat")
 	Resource resource;
@@ -25,18 +23,18 @@ class StartApplicationTest {
 	private FileProcessor fileProcessor;
 
 	@Test
-	@DisplayName("Should create report file with sucess")
-	void shouldCreateReportFileWithSucess() throws Exception {
+	@DisplayName("should create report values successfully")
+	void shouldCreateReportValuesSuccessfully() throws Exception {
 		String expect = "Total Customers: 2, Total Sellers: 2, Most expensive sale id: 10, Worst salesman name: Paulo";
-		
+
 		CamelContext ctx = new DefaultCamelContext();
 		Exchange exchange = new DefaultExchange(ctx);
-		
 		exchange.getIn().setBody(resource);
-		
+
 		fileProcessor.process(exchange);
-		
+
 		assertEquals(expect, exchange.getIn().getBody());
 	}
+	
 
 }

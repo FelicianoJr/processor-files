@@ -1,9 +1,9 @@
 package com.dbc.analise.file.domain;
 
 
-import java.math.BigDecimal;
-
 import static com.dbc.analise.file.util.StringUtils.divideByDash;
+
+import java.math.BigDecimal;
 
 import lombok.Getter;
 

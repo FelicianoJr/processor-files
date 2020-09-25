@@ -18,8 +18,14 @@ import com.dbc.analise.file.domain.DataInfo;
 import com.dbc.analise.file.domain.Items;
 import com.dbc.analise.file.domain.Report;
 import com.dbc.analise.file.domain.Sales;
+import com.dbc.analise.file.exception.ReportException;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
+@AllArgsConstructor
 public class ReportServiceImpl implements ReportService {
 	
 	@Autowired
@@ -27,9 +33,8 @@ public class ReportServiceImpl implements ReportService {
 	
 	@Override
 	public Report process(List<DataInfo> dataInfos) {
-		
 		Report report = new Report();
-		if (!dataInfos.isEmpty()) {
+		try {
 			report.updateCustomers(dataInfos, typeConfig);
 			report.updateSellers(dataInfos, typeConfig);
 
@@ -41,6 +46,9 @@ public class ReportServiceImpl implements ReportService {
 
 			map.entrySet().stream().min(comparing(Map.Entry::getValue))
 					.ifPresent(salesMin -> findBySaleId(sales, salesMin).ifPresent(sale -> report.updateName(sale)));
+		} catch (Exception e) {
+			log.error("falhou man", e);
+			throw new ReportException();
 		}
 		return report;
 	}
