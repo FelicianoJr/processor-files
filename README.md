@@ -3,7 +3,7 @@
 
 ### Sobre o Projeto
 
-O projeto executa leitura, processamento e escrita  de arquivos .dat. O resultado do processamento gera um relatório que inclui cálculos da quantidade de clientes,
+O projeto executa leitura, processamento e escrita  de arquivos .dat. O resultado do processamento gera um relatório que inclui quantidade de clientes,
 quantidade de vendedores, o id da venda mais cara e o nome do vendedor que menos vendeu.  
 
 ## Tecnologias do projeto
